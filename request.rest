@@ -1,0 +1,101 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Bambangs",
+    "email": "bambang123@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+// Get All Users
+GET http://localhost:5000/users
+
+###
+// Get Single User
+GET http://localhost:5000/users/2e8b1152-5d57-43e7-a5c7-4275c4ff36a6
+
+###
+// Update user
+PATCH  http://localhost:5000/users/44e3f959-737b-4372-91b6-dadedd9c0b24
+Content-Type: application/json
+
+{
+    "name" : "Bambangs",
+    "email": "bambangs123@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// Delete user
+DELETE http://localhost:5000/users/44e3f959-737b-4372-91b6-dadedd9c0b24
+
+###
+// Login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "dimas123@gmail.com",
+    "password": "123456"
+}
+
+###
+// Login user 
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "bambang123@gmail.com",
+    "password": "123456"
+}
+###
+// Cek status login
+GET http://localhost:5000/me
+
+###
+// Logout
+DELETE http://localhost:5000/logout
+
+###
+// get all product admin/user
+GET http://localhost:5000/products
+
+###
+// get product by id admin/user
+GET http://localhost:5000/products/d48c938f-bec4-4dd3-984d-e113d259678f
+
+###
+// Buat data baru product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name" : "Product 2",
+    "price": 333333
+}
+
+###
+// Update data product
+PATCH http://localhost:5000/products/71f6b138-eca6-43de-9e3f-4fb564ea428a
+Content-Type: application/json
+
+{
+    "name" : "Product update by admin",
+    "price": 22222255
+}
+
+###
+// Delete data product
+DELETE http://localhost:5000/products/d48c938f-bec4-4dd3-984d-e113d259678f
+Content-Type: application/json
+
+{
+    "name" : "Product update by admin",
+    "price": 22222255
+}
